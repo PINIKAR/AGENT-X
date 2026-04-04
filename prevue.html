@@ -6,43 +6,32 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-  document.getElementById('generate-btn').addEventListener('click', function() {
-    const preview = document.getElementById('preview-section');
-    
-    // Show the element first but keep it transparent
-    preview.style.display = 'block';
-    
-    // Use a tiny timeout to trigger the transition after display:block is applied
-    setTimeout(() => {
-      preview.classList.remove('opacity-0', 'invisible');
-      preview.classList.add('opacity-100', 'visible');
-      
-      // Scroll to the preview section smoothly
-      preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 10);
-  });
-</script>
 <style>
         body { font-family: 'Manrope', sans-serif; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .frosted-blur { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
         .architectural-gradient { background: linear-gradient(135deg, #001736 0%, #002b5b 100%); }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin 3s linear infinite;
+        }
+        
+        body {
+            min-height: max(884px, 100dvh);
+        }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
 <!-- Top Navigation Anchor -->
 <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm shadow-[#002B5B]/5">
 <div class="flex items-center justify-between px-8 h-16 w-full">
 <div class="text-lg font-black tracking-[-0.05em] text-[#002B5B] dark:text-white uppercase">
-                AGENT-X
-            </div>
+            AGENT-X
+        </div>
 <div class="flex items-center gap-2 text-[#002B5B] font-bold font-manrope tracking-tighter uppercase text-xs">
 <span class="material-symbols-outlined" style="font-size: 18px;">architecture</span>
 <span>ARCHITECTURAL AI</span>
@@ -55,22 +44,28 @@
 <div class="space-y-12">
 <header class="space-y-6">
 <h1 class="text-5xl md:text-7xl font-extralight tracking-tight leading-[1.1] text-primary">
-                        הנכס הבא שלך <br/>
+                    הנכס הבא שלך <br/>
 <span class="font-bold">כבר מדבר בעצמו?</span>
 </h1>
 <p class="text-on-surface-variant text-lg max-w-md font-light leading-relaxed">
-                        הופכים תיאור פשוט לקמפיין שיווקי יוקרתי תוך שניות. טכנולוגיית AI המותאמת במיוחד לשוק הנדל״ן הישראלי.
-                    </p>
+                    הופכים תיאור פשוט לקמפיין שיווקי יוקרתי תוך שניות. טכנולוגיית AI המותאמת במיוחד לשוק הנדל״ן הישראלי.
+                </p>
 </header>
 <div class="space-y-8">
 <div class="relative group">
 <label class="block text-[10px] uppercase tracking-widest font-bold text-primary mb-2 opacity-50 group-focus-within:opacity-100 transition-opacity">תיאור הנכס</label>
-<textarea class="w-full min-h-[200px] bg-surface-container-high border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-xl font-light p-6 resize-none transition-all placeholder:text-outline/40" placeholder="תארו את הנכס כאן (למשל: פנטהאוז 4 חדרים, נוף לים, מרפסת שמש...)"></textarea>
+<textarea class="w-full min-h-[200px] bg-surface-container-high border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-xl font-light p-6 resize-none transition-all placeholder:text-outline/40" id="property-input" placeholder="תארו את הנכס כאן (למשל: פנטהאוז 4 חדרים, נוף לים, מרפסת שמש...)"></textarea>
 </div>
 <!-- The Magic Button -->
-<button class="w-full architectural-gradient text-on-primary py-6 rounded-DEFAULT font-bold tracking-widest uppercase hover:opacity-90 active:scale-[0.98] transition-all shadow-xl shadow-primary/10 flex items-center justify-center gap-3" id="generate-btn">
+<button class="w-full architectural-gradient text-on-primary py-6 rounded-DEFAULT font-bold tracking-widest uppercase hover:opacity-90 active:scale-[0.98] transition-all shadow-xl shadow-primary/10 flex items-center justify-center gap-3 relative overflow-hidden" id="generate-btn">
+<span class="flex items-center gap-3" id="btn-text">
 <span>צרו קמפיין שיווקי ברגע</span>
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</span>
+<span class="hidden items-center gap-3" id="btn-loader">
+<span class="material-symbols-outlined animate-spin">refresh</span>
+<span>מנתח נכס ומעצב קמפיין...</span>
+</span>
 </button>
 </div>
 </div>
@@ -108,13 +103,13 @@
 <img class="w-full h-full object-cover" data-alt="cinematic wide shot of a contemporary villa with an infinity pool reflecting the deep blue twilight sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_qV7pr_cWYqEo_spEv1CaDGAdQWxihlPpEIf-T8NXzJReCk3lzo1C4df1flwQ8aslvI4CXIfVM5M65D636t_wvOVQ841Cwk20hSZfrKxtaQAiw3nhdse-txrB_C6u_blChYcIOgBj59QyItl8p0LakzSnzMUwjEAwzegLmTbZcGjWPppS1BFG59lBDpcM2XF-PWm126Q1ZMyeOkqBbgciegfxJSVLYoulXWX7bbfjGj-obKHHNFfPVlpXNBogI5Nu33-zIEqrw8g"/>
 </div>
 <!-- Post Content with Blur -->
-<div class="p-8 space-y-4 relative">
-<div class="space-y-2">
-<h3 class="text-2xl font-bold text-primary tracking-tight leading-none">הזדמנות נדירה: שלמות אדריכלית מול הים</h3>
-<p class="text-on-surface leading-relaxed font-light">כשהעיצוב המודרני פוגש את קו האופק. פנטהאוז ייחודי המציע חוויית מגורים בלתי מתפשרת עם מפרט טכני עשיר וחללים רחבי ידיים...</p>
+<div class="p-8 space-y-4 relative pb-64">
+<div class="space-y-4">
+<h3 class="text-2xl font-bold text-primary tracking-tight leading-tight" id="preview-headline"></h3>
+<p class="text-on-surface leading-relaxed font-light" id="preview-body"></p>
 </div>
 <!-- Blurred Overlay & Lead Gen -->
-<div class="absolute inset-x-0 bottom-0 pt-32 pb-12 px-8 frosted-blur bg-white/60 flex flex-col items-center text-center justify-end">
+<div class="absolute inset-x-0 bottom-0 pt-32 pb-12 px-8 frosted-blur bg-white/70 flex flex-col items-center text-center justify-end">
 <div class="space-y-6 max-w-sm w-full">
 <div class="space-y-2">
 <h4 class="text-xl font-bold text-primary">אהבתם?</h4>
@@ -126,8 +121,8 @@
 <input class="w-full bg-white border-b-2 border-outline-variant focus:border-primary focus:ring-0 p-4 text-center font-medium transition-all" placeholder="דואר אלקטרוני או טלפון" type="email"/>
 </div>
 <button class="w-full bg-primary text-on-primary py-4 rounded-DEFAULT font-bold uppercase tracking-widest text-xs hover:bg-primary-container transition-colors">
-                                    שלחו לי את הקמפיין
-                                </button>
+                                שלחו לי את הקמפיין
+                            </button>
 </form>
 </div>
 </div>
@@ -139,8 +134,8 @@
 <footer class="bg-[#f9f9f9] dark:bg-slate-950 py-12">
 <div class="flex flex-col md:flex-row items-center justify-between px-12 max-w-7xl mx-auto gap-4">
 <div class="font-manrope text-[10px] tracking-widest font-medium uppercase text-slate-400">
-                © 2024 AGENT-X. ALL RIGHTS RESERVED.
-            </div>
+            © 2024 AGENT-X. ALL RIGHTS RESERVED.
+        </div>
 <div class="flex gap-8">
 <a class="font-manrope text-[10px] tracking-widest font-medium uppercase text-slate-400 hover:text-[#002B5B] transition-colors" href="#">Privacy</a>
 <a class="font-manrope text-[10px] tracking-widest font-medium uppercase text-slate-400 hover:text-[#002B5B] transition-colors border-b border-[#002B5B] text-[#002B5B]" href="#">Terms</a>
@@ -149,18 +144,49 @@
 </footer>
 <script>
   document.getElementById('generate-btn').addEventListener('click', function() {
+    const input = document.getElementById('property-input').value.trim();
+    if (!input) {
+      alert('בבקשה הזינו תיאור נכס תחילה');
+      return;
+    }
+
+    const btnText = document.getElementById('btn-text');
+    const btnLoader = document.getElementById('btn-loader');
     const preview = document.getElementById('preview-section');
-    
-    // Show the element first but keep it transparent
-    preview.style.display = 'block';
-    
-    // Use a tiny timeout to trigger the transition after display:block is applied
+    const previewHeadline = document.getElementById('preview-headline');
+    const previewBody = document.getElementById('preview-body');
+
+    // Start loading state
+    btnText.classList.add('hidden');
+    btnLoader.classList.remove('hidden');
+    btnLoader.classList.add('flex');
+    this.disabled = true;
+
+    // Simulate AI Generation
     setTimeout(() => {
-      preview.classList.remove('opacity-0', 'invisible');
-      preview.classList.add('opacity-100', 'visible');
+      // Logic to extract "headline" (first few words or sentence)
+      const lines = input.split(/[.\n]/);
+      const headline = "הזדמנות נדירה: " + (lines[0].length > 40 ? lines[0].substring(0, 40) + "..." : lines[0]);
       
-      // Scroll to the preview section smoothly
-      preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 10);
+      // Populate preview
+      previewHeadline.textContent = headline;
+      previewBody.textContent = input;
+
+      // Reset button
+      btnLoader.classList.add('hidden');
+      btnLoader.classList.remove('flex');
+      btnText.classList.remove('hidden');
+      this.disabled = false;
+
+      // Reveal preview
+      preview.style.display = 'block';
+      setTimeout(() => {
+        preview.classList.remove('opacity-0', 'invisible');
+        preview.classList.add('opacity-100', 'visible');
+        preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+
+    }, 1500);
   });
-</script></body></html>
+</script>
+</body></html>
