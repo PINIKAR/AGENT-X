@@ -6,7 +6,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -18,8 +17,8 @@
                     "on-surface": "#1a1c1c",
                     "primary-fixed-dim": "#a9c7ff",
                     "surface-container-highest": "#e2e2e2",
-                    "primary": "#001736",
-                    "primary-container": "#002b5b",
+                    "primary": "#002B5B",
+                    "primary-container": "#001736",
                     "on-error": "#ffffff",
                     "tertiary": "#221500",
                     "error": "#ba1a1a",
@@ -32,7 +31,7 @@
                     "surface-container-high": "#e8e8e8",
                     "on-background": "#1a1c1c",
                     "surface-bright": "#f9f9f9",
-                    "surface-tint": "#405f91",
+                    "surface-tint": "#002B5B",
                     "on-secondary": "#ffffff",
                     "secondary-fixed": "#dce3f2",
                     "on-primary": "#ffffff",
@@ -44,7 +43,7 @@
                     "surface-container-low": "#f3f3f3",
                     "surface-container-lowest": "#ffffff",
                     "secondary-container": "#dce3f2",
-                    "secondary-fixed-dim": "#c0c7d5",
+                    "secondary-fixed-dim": "#c0c7v5",
                     "secondary": "#585f6b",
                     "surface": "#f9f9f9",
                     "inverse-surface": "#2f3131",
@@ -82,141 +81,140 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         .tonal-transition { transition: background-color 0.3s ease; }
-        .no-line { border: none !important; }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
 </head>
 <body class="bg-background text-on-surface antialiased overflow-x-hidden">
 <!-- TopAppBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#001736]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,23,54,0.05)] no-line tonal-transition bg-surface-container-low/20">
-<div class="flex justify-between items-center px-8 py-4 w-full max-w-full mx-auto rtl">
-<div class="text-xl font-black tracking-tighter text-[#001736] dark:text-white flex items-center gap-2 font-manrope tracking-tight font-bold uppercase"><div class="flex items-center gap-2">
-<div class="w-8 h-8 bg-primary rounded-sm flex items-center justify-center text-on-primary">
-<span alt="Brand Logo" class="material-symbols-outlined text-xl">architecture</span>
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-outline-variant/30 tonal-transition">
+<div class="flex justify-between items-center px-6 md:px-12 py-4 w-full max-w-7xl mx-auto rtl">
+<div class="flex items-center gap-3">
+<img alt="AGENT-X" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTVuRj9rYTJZKg7DFGxFoxnijTJ7TsGwQ4sJrOz2KBr8HKl2-IcrVbtOjvgUpIBgiMqbZHVWMCy6ffrv1zM3tmbFEiSXote8-3TciHHp0n2VcSAf_Tr5EFl0WQ-atz8xvg20pq_1fTr__28Srcbcqi6viag6yTbYez-U2YtwcTRVl5Pxjh7RfTpbs5NYIBJPKO6MzyyDACGj9CdoxDfQxRTyRNf2tBe60rTcQZkftyW9MmVRMBSR8H-F7-VmGZgolTf5GcnPhhnr8"/>
+<span class="text-xl font-black tracking-widest text-primary uppercase">AGENT-X</span>
 </div>
-<span class="tracking-[0.2em] font-bold">AGENT-X</span>
-</div></div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-[#002b5b] font-bold border-b-2 border-[#002b5b] transition-colors duration-300 font-manrope text-sm tracking-wide" href="#">קמפיינים</a>
-<a class="text-[#002b5b]/60 hover:text-[#002b5b] transition-colors duration-300 font-manrope text-sm tracking-wide" href="#">נכסים</a>
-<a class="text-[#002b5b]/60 hover:text-[#002b5b] transition-colors duration-300 font-manrope text-sm tracking-wide" href="#">ניתוח שוק</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-primary font-bold border-b-2 border-primary transition-colors duration-300 text-sm tracking-wide" href="/portal.html">קמפיינים</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 text-sm tracking-wide" href="/portal.html">נכסים</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 text-sm tracking-wide" href="/portal.html">ניתוח שוק</a>
 </div>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-[#001736]" data-icon="notifications">notifications</span>
-<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold text-xs">AZ</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="notifications">notifications</span>
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs">AZ</div>
 </div>
 </div>
 </nav>
-<main class="pt-24 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+<main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
 <!-- Header Section -->
-<header class="mb-16 mt-8">
-<div class="flex items-baseline gap-4 mb-2">
-<span class="text-primary/20 text-6xl font-black leading-none select-none font-light">01</span>
-<h1 class="text-4xl md:text-5xl font-extrabold text-primary tracking-tighter">AGENT-X: יצירת קמפיין</h1>
+<header class="mb-20">
+<div class="flex items-baseline gap-4 mb-4">
+<span class="text-primary/10 text-8xl font-thin leading-none select-none">01</span>
+<h1 class="text-4xl md:text-6xl font-extrabold text-primary tracking-tighter">AGENT-X: יצירת קמפיין</h1>
 </div>
-<p class="text-on-surface-variant max-w-2xl text-lg leading-relaxed">הפוך נתונים גולמיים לסיפור אדריכלי משכנע. הגדר את פרטי הנכס והנח ל-AGENT-X ליצור את המיתוג המושלם.</p>
+<p class="text-on-surface-variant max-w-2xl text-xl leading-relaxed font-light">הפוך נתונים גולמיים לסיפור אדריכלי משכנע. הגדר את פרטי הנכס והנח ל-AGENT-X ליצור את המיתוג המושלם.</p>
 </header>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 <!-- Input Section -->
-<section class="lg:col-span-5 space-y-10">
-<div class="bg-surface-container-low p-8 rounded-lg">
-<label class="block text-primary font-bold mb-4 tracking-tight uppercase text-sm">פרטי הנכס והחזון</label>
-<textarea class="w-full h-64 bg-surface-container-lowest border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface placeholder:text-outline-variant/60 p-6 resize-none transition-all duration-300 text-lg leading-relaxed" placeholder="תאר את הנכס: מיקום, סגנון עיצובי, חומרים, ואווירה..."></textarea>
-<div class="mt-8 flex flex-col gap-4">
-<button class="w-full py-5 bg-surface-container-highest text-primary font-bold flex items-center justify-center gap-3 hover:bg-outline-variant/20 transition-all duration-300">
+<section class="lg:col-span-5 space-y-12">
+<div class="bg-surface-container-low p-10 rounded-sm">
+<label class="block text-primary font-bold mb-6 tracking-widest uppercase text-xs">פרטי הנכס והחזון</label>
+<textarea class="w-full h-80 bg-surface-container-lowest border-none border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface placeholder:text-outline-variant/60 p-8 resize-none transition-all duration-300 text-lg leading-relaxed" placeholder="תאר את הנכס: מיקום, סגנון עיצובי, חומרים, ואווירה..."></textarea>
+<div class="mt-10 flex flex-col gap-5">
+<button class="w-full py-6 bg-surface-container-highest text-primary font-bold flex items-center justify-center gap-3 hover:bg-outline-variant/20 transition-all duration-300 border border-primary/10">
 <span class="material-symbols-outlined" data-icon="cloud_upload">cloud_upload</span>
 <span>העלאת תמונות ושרטוטים</span>
 </button>
-<button class="w-full py-5 bg-primary text-on-primary font-extrabold uppercase tracking-widest flex items-center justify-center gap-3 shadow-xl hover:bg-primary-container transition-all duration-300">
+<button class="w-full py-6 bg-primary text-on-primary font-extrabold uppercase tracking-[0.2em] flex items-center justify-center gap-3 shadow-2xl hover:bg-primary-container transition-all duration-300">
 <span>צור קמפיין שיווקי</span>
 <span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
 </button>
 </div>
 </div>
-<div class="bg-primary-container p-8 text-on-primary-container">
-<h3 class="font-bold mb-2 flex items-center gap-2">
+<div class="bg-primary-container p-10 text-on-primary-container relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-bold mb-4 flex items-center gap-3 text-lg">
 <span class="material-symbols-outlined" data-icon="tips_and_updates">tips_and_updates</span>
                         טיפ לעורך
                     </h3>
-<p class="text-sm opacity-80 leading-relaxed">השתמש בתיאורים חושיים כמו "אור טבעי שוטף" או "בטון חשוף מינימליסטי" כדי לשפר את תוצאות הבינה המלאכותית.</p>
+<p class="text-base opacity-90 leading-relaxed font-light">השתמש בתיאורים חושיים כמו "אור טבעי שוטף" או "בטון חשוף מינימליסטי" כדי לשפר את תוצאות הבינה המלאכותית.</p>
+</div>
+<div class="absolute -right-4 -bottom-4 text-white/5">
+<span class="material-symbols-outlined text-9xl">architecture</span>
+</div>
 </div>
 </section>
 <!-- Preview Section -->
-<section class="lg:col-span-7 space-y-8">
+<section class="lg:col-span-7 space-y-10">
 <div class="flex items-center justify-between">
-<h2 class="text-xs font-black uppercase tracking-widest text-primary/40 flex items-center gap-2">
-<span class="w-8 h-[1px] bg-primary/20"></span>
-                        תצוגה מקדימה של הקמפיין
-                    </h2>
-<span class="text-xs font-bold text-primary px-3 py-1 bg-secondary-container rounded-full uppercase">Draft v1.0</span>
+<h2 class="text-xs font-black uppercase tracking-[0.3em] text-primary/40 flex items-center gap-4">
+<span class="w-12 h-[1px] bg-primary/20"></span>
+                    תצוגה מקדימה של הקמפיין
+                </h2>
+<span class="text-[10px] font-bold text-primary px-4 py-1.5 bg-secondary-container rounded-full tracking-widest uppercase">DRAFT V1.0</span>
 </div>
-<div class="bg-surface-container-lowest shadow-[0_40px_80px_rgba(0,23,54,0.08)] overflow-hidden">
-<!-- Image Mosaic Header -->
-<div class="relative h-[500px] overflow-hidden group">
-<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" data-alt="luxury modern architectural villa with floor to ceiling windows overlooking the ocean at sunset with dramatic warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8BfrMe07x54oKZA22yKg4AKdYrLMhaCqHExn6KEXLF0tVv80GKNcQmaGQ_2R55ay2AagGMb9TcLrAz7xEZ35kbMwr1Awg4Z9v0aWn_5aVc_YDZ16WozpXw0bPQhYMxZfWrQYC3JbsrVhsjQvjWVygON9so06RuDWwech0yRzPQlVlP-wSGIzOBPJjhq5L7blVpn103WUByHFlrX4YfA7hTlNBLKAHX_XXtQpOdyxyeqVHQAqabr2lyKJk-xa4BcDByctPn5BHHfg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#001736] via-transparent to-transparent opacity-60"></div>
-<div class="absolute bottom-10 right-10 left-10">
-<h3 class="text-4xl md:text-5xl font-black text-white leading-tight mb-4 max-w-xl">יצירת מופת אדריכלית מעל קו החוף</h3>
+<div class="bg-white shadow-[0_60px_120px_rgba(0,43,91,0.12)] overflow-hidden">
+<!-- Image Header -->
+<div class="relative h-[600px] overflow-hidden group">
+<img alt="Architectural Villa" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8BfrMe07x54oKZA22yKg4AKdYrLMhaCqHExn6KEXLF0tVv80GKNcQmaGQ_2R55ay2AagGMb9TcLrAz7xEZ35kbMwr1Awg4Z9v0aWn_5aVc_YDZ16WozpXw0bPQhYMxZfWrQYC3JbsrVhsjQvjWVygON9so06RuDWwech0yRzPQlVlP-wSGIzOBPJjhq5L7blVpn103WUByHFlrX4YfA7hTlNBLKAHX_XXtQpOdyxyeqVHQAqabr2lyKJk-xa4BcDByctPn5BHHfg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-16 right-16 left-16">
+<h3 class="text-4xl md:text-5xl font-black text-white leading-tight mb-8 max-w-2xl">יצירת מופת אדריכלית מעל קו החוף</h3>
 <div class="flex gap-4">
-<span class="bg-white/10 backdrop-blur-md px-4 py-2 text-white text-xs font-bold uppercase tracking-wider">HERZLIYA PITUACH</span>
-<span class="bg-white/10 backdrop-blur-md px-4 py-2 text-white text-xs font-bold uppercase tracking-wider">RESIDENTIAL</span>
+<span class="bg-white/10 backdrop-blur-xl border border-white/20 px-6 py-2 text-white text-[10px] font-bold uppercase tracking-widest">HERZLIYA PITUACH</span>
+<span class="bg-white/10 backdrop-blur-xl border border-white/20 px-6 py-2 text-white text-[10px] font-bold uppercase tracking-widest">RESIDENTIAL</span>
 </div>
 </div>
 </div>
-<!-- Editorial Content -->
-<div class="p-12 space-y-10">
-<div class="flex flex-col md:flex-row gap-12">
+<!-- Content Area -->
+<div class="p-16 space-y-16">
+<div class="flex flex-col md:flex-row gap-16">
 <div class="flex-1">
-<p class="text-2xl font-light text-primary leading-snug mb-6 border-r-4 border-primary pr-6">
+<div class="border-r-4 border-primary pr-10 mb-8">
+<p class="text-3xl font-light text-primary leading-snug">
                                     דיאלוג נדיר בין בטון חשוף, זכוכית ומרחבי הים התיכון.
                                 </p>
-<div class="text-on-surface-variant leading-relaxed space-y-4 text-lg">
+</div>
+<div class="text-on-surface-variant leading-loose space-y-6 text-lg font-light">
 <p>הוילה ממוקמת בנקודה הגבוהה ביותר על הצוק, מציעה חוויה מגורים אולטימטיבית המשלבת פרטיות מוחלטת עם נוף פנורמי אינסופי. התכנון האדריכלי שם דגש על זרימה של אור טבעי וטשטוש הגבולות בין פנים לחוץ.</p>
 <p>חומרי גלם טבעיים כמו אבן מקומית ועץ אלון מעושן נבחרו בקפידה כדי ליצור חמימות בתוך המבנה המונומנטלי.</p>
 </div>
 </div>
-<!-- Technical Specs - "Property Inset" -->
-<div class="md:w-64 bg-surface-container-high p-8 flex flex-col gap-6">
-<div class="flex flex-col gap-1">
-<span class="text-[10px] font-black text-primary/40 uppercase tracking-widest">AREA</span>
-<div class="flex items-center gap-2 text-primary font-bold">
-<span class="material-symbols-outlined text-lg" data-icon="square_foot">square_foot</span>
-<span>750 מ"ר</span>
+<!-- Property Specs -->
+<div class="md:w-72 bg-surface-container-high p-10 flex flex-col gap-10">
+<div class="space-y-2">
+<span class="text-[10px] font-black text-primary/40 uppercase tracking-widest block">AREA</span>
+<div class="flex items-center gap-3 text-primary font-bold">
+<span class="material-symbols-outlined text-xl" data-icon="square_foot">square_foot</span>
+<span class="text-lg">750 מ"ר</span>
 </div>
 </div>
-<div class="flex flex-col gap-1">
-<span class="text-[10px] font-black text-primary/40 uppercase tracking-widest">BEDROOMS</span>
-<div class="flex items-center gap-2 text-primary font-bold">
-<span class="material-symbols-outlined text-lg" data-icon="bed">bed</span>
-<span>6 סוויטות</span>
+<div class="space-y-2">
+<span class="text-[10px] font-black text-primary/40 uppercase tracking-widest block">BEDROOMS</span>
+<div class="flex items-center gap-3 text-primary font-bold">
+<span class="material-symbols-outlined text-xl" data-icon="bed">bed</span>
+<span class="text-lg">6 סוויטות</span>
 </div>
 </div>
-<div class="flex flex-col gap-1">
-<span class="text-[10px] font-black text-primary/40 uppercase tracking-widest">LEVELS</span>
-<div class="flex items-center gap-2 text-primary font-bold">
-<span class="material-symbols-outlined text-lg" data-icon="layers">layers</span>
-<span>3 קומות</span>
+<div class="space-y-2">
+<span class="text-[10px] font-black text-primary/40 uppercase tracking-widest block">LEVELS</span>
+<div class="flex items-center gap-3 text-primary font-bold">
+<span class="material-symbols-outlined text-xl" data-icon="layers">layers</span>
+<span class="text-lg">3 קומות</span>
 </div>
 </div>
-<div class="flex flex-col gap-1">
-<span class="text-[10px] font-black text-primary/40 uppercase tracking-widest">AMENITIES</span>
-<div class="flex items-center gap-2 text-primary font-bold">
-<span class="material-symbols-outlined text-lg" data-icon="pool" data-weight="fill" style="font-variation-settings: 'FILL' 1;">pool</span>
-<span>בריכת אינסוף</span>
+<div class="space-y-2">
+<span class="text-[10px] font-black text-primary/40 uppercase tracking-widest block">AMENITIES</span>
+<div class="flex items-center gap-3 text-primary font-bold">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">pool</span>
+<span class="text-lg">בריכת אינסוף</span>
 </div>
 </div>
 </div>
 </div>
-<!-- Map Inset -->
-<div class="h-48 bg-surface-container-low relative grayscale contrast-125 overflow-hidden">
-<img class="w-full h-full object-cover opacity-50" data-alt="abstract minimalist architectural map with fine lines and dark blue accents" data-location="Herzliya, Israel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBihmbHzyfd7bjvmSG43SwqM1dfSZBIsQDUdceoec-h-dQJV32OX3dHJRB8d9ToaOJDGJvJPKvdRpLW98phAJmaYcSI-h2Yr5ArqQf-qBzhJmJycNLlpem8S9IW9rmttKnw8URul9TtcEXFX4Vl-GF0zZAAKovyIRmqjgVRhgzI9FzMssmftqCkOKHqbpH0YXYCsUCASXVIEI7-w-VxMJLhy1DojtSvTxm9QIAsGmDWDgp31IKQvbl2rPkFHKyzJp5Fb1ZSuUAA-6w"/>
+<!-- Map/Plan Section -->
+<div class="h-64 bg-surface-container-low relative grayscale contrast-125 overflow-hidden border border-outline-variant/30">
+<img alt="Site Plan" class="w-full h-full object-cover opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBihmbHzyfd7bjvmSG43SwqM1dfSZBIsQDUdceoec-h-dQJV32OX3dHJRB8d9ToaOJDGJvJPKvdRpLW98phAJmaYcSI-h2Yr5ArqQf-qBzhJmJycNLlpem8S9IW9rmttKnw8URul9TtcEXFX4Vl-GF0zZAAKovyIRmqjgVRhgzI9FzMssmftqCkOKHqbpH0YXYCsUCASXVIEI7-w-VxMJLhy1DojtSvTxm9QIAsGmDWDgp31IKQvbl2rPkFHKyzJp5Fb1ZSuUAA-6w"/>
 <div class="absolute inset-0 flex items-center justify-center">
-<div class="bg-primary text-white p-3 rounded-none shadow-2xl">
-<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<div class="bg-primary text-white p-5 shadow-2xl">
+<span class="material-symbols-outlined text-2xl" data-icon="location_on">location_on</span>
 </div>
 </div>
 </div>
@@ -226,17 +224,20 @@
 </div>
 </main>
 <!-- Footer -->
-<footer class="w-full border-t border-[#002b5b]/10 bg-[#f3f3f3] dark:bg-[#001736] tonal-shift-bg">
-<div class="w-full px-12 py-16 flex flex-col md:flex-row-reverse justify-between items-center gap-6 rtl">
-<div class="text-lg font-black text-[#001736] font-manrope">AGENT-X</div>
-<div class="flex gap-8 font-manrope text-sm leading-relaxed text-[#002b5b]/70">
-<a class="hover:text-[#001736] hover:underline transition-colors duration-300" href="#">תקנון</a>
-<a class="hover:text-[#001736] hover:underline transition-colors duration-300" href="#">מדיניות פרטיות</a>
-<a class="hover:text-[#001736] hover:underline transition-colors duration-300" href="#">נגישות</a>
+<footer class="w-full border-t border-outline-variant/30 bg-white py-20 px-6 md:px-12 mt-20">
+<div class="max-w-7xl mx-auto flex flex-col items-center gap-12">
+<div class="flex items-center gap-3">
+<img alt="AGENT-X" class="h-6 w-auto opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr13KZUFmqKB0rOBRiarnxXspDkVgvK4T9DSNxVL-IKjpbAl9C9OSODPRoSjGLFlOW4o5Ur9vzGEnn_mW09UEO9Lon_eR6cL6JR1qNoBLege7LBtl3M9OnFSpEr_vd4esaCpMvDQRMwAaYCOH54NVU3lyTC6nRC-4IiBBQYgNQL59tUq05GRdgtFmKWjE-y5fdxI8FFDpU2AEIjwUcqsQWyGQ0oWfGjb8JEU4umwiT9HgWstavteNkhPVwAJnosAanBwBor45XDt0"/>
+<span class="text-lg font-black tracking-widest text-primary uppercase">AGENT-X</span>
 </div>
-<div class="text-[#001736] dark:text-[#f3f3f3] font-manrope text-sm leading-relaxed opacity-80">
-                © 2024 AGENT-X. כל הזכויות שמורות.
-            </div>
+<div class="flex flex-wrap justify-center gap-12 text-sm tracking-widest uppercase font-bold text-primary/60">
+<a class="hover:text-primary transition-colors duration-300" href="/terms.html">תקנון</a>
+<a class="hover:text-primary transition-colors duration-300" href="/privacy.html">מדיניות פרטיות</a>
+<a class="hover:text-primary transition-colors duration-300" href="/portal.html">נגישות</a>
+</div>
+<div class="text-on-surface-variant text-[10px] tracking-widest uppercase opacity-60">
+            © 2024 AGENT-X. כולם שמורות הזכויות כל.
+        </div>
 </div>
 </footer>
 </body></html>
