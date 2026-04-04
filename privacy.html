@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c0c7d5",
+                        "on-tertiary-fixed-variant": "#564426",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "on-primary-fixed-variant": "#264778",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-primary": "#a9c7ff",
+                        "on-tertiary-fixed": "#271902",
+                        "secondary-fixed": "#dce3f2",
+                        "on-secondary": "#ffffff",
+                        "primary": "#001736",
+                        "on-primary-container": "#7594ca",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#43474f",
+                        "on-primary-fixed": "#001b3d",
+                        "surface": "#f9f9f9",
+                        "tertiary-container": "#39290e",
+                        "surface-tint": "#405f91",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-secondary-fixed-variant": "#404753",
+                        "surface-container-highest": "#e2e2e2",
+                        "outline-variant": "#c4c6d0",
+                        "on-surface": "#1a1c1c",
+                        "on-background": "#1a1c1c",
+                        "surface-bright": "#f9f9f9",
+                        "primary-fixed": "#d6e3ff",
+                        "secondary": "#585f6b",
+                        "on-secondary-container": "#5e6571",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#dce3f2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#a88f6c",
+                        "tertiary-fixed-dim": "#dec39c",
+                        "surface-container": "#eeeeee",
+                        "outline": "#747780",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary-fixed": "#fbdeb7",
+                        "surface-container-low": "#f3f3f3",
+                        "on-error": "#ffffff",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed": "#151c27",
+                        "tertiary": "#221500",
+                        "primary-container": "#002b5b",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .editorial-text {
+            line-height: 1.6;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar - Suppressed Shell logic implies focused task, but for Policy we keep brand shell -->
+<header class="fixed top-0 w-full z-50 bg-[#f9f9f9]/80 backdrop-blur-xl shadow-xl shadow-[#002B5B]/5">
+<div class="flex flex-row-reverse justify-between items-center px-8 py-6 w-full max-w-full">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black text-[#002B5B] tracking-tighter uppercase">AGENT-X</span>
+<img alt="AGENT-X logo" class="w-8 h-8 object-contain" data-alt="minimalist architectural logo of a stylized letter A using sharp clean lines and geometric symmetry in deep navy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5v5ecwJN4Q513iX3-Tt7F6oGSIBDRvY5qiQDdTGfWDObpXG4XeExahYa7V4wesBCmO9PhhhllE11weF8LNCwpY_Rq-Jto0RuJZvOS4PiSIY7QqPYg_O23vvMoHQeMrjv_DmufXEZKH_ICghuXJulqC1y5zxtlvsu11B760jxyZDTWDf1g-OiNy_H8ENjBnGT6BR7AeMuz5zYxBttgCzdyhmRePv-L1wLwFSj5z7lJsj0BBAJCovFlUcMEpT5ZBwVi5rTWL4q3JvE"/>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-[#002B5B]/60 font-manrope tracking-tight hover:opacity-80 transition-opacity" href="index.html">בית</a>
+<a class="text-[#002B5B]/60 font-manrope tracking-tight hover:opacity-80 transition-opacity" href="portal.html">פורטל</a>
+<a class="text-[#002B5B] font-bold font-manrope tracking-tight" href="privacy.html">מדיניות פרטיות</a>
+</nav>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-6xl mx-auto">
+<!-- Hero Section: Editorial Header -->
+<section class="mb-20">
+<div class="flex flex-col md:flex-row gap-12 items-end">
+<div class="flex-1">
+<h1 class="text-5xl md:text-7xl font-extrabold text-primary tracking-tighter mb-6 leading-none">
+                        מדיניות פרטיות
+                    </h1>
+<div class="h-1 w-24 bg-primary mb-8"></div>
+<p class="text-xl text-secondary font-light max-w-2xl editorial-text">
+                        אנו ב-AGENT-X רואים בשמירה על פרטיות המשתמשים שלנו ערך עליון. מסמך זה מפרט את האופן שבו אנו אוספים, מעבדים ומגינים על המידע האישי שלכם כחלק מהחזון האדריכלי והמקצועי שלנו.
+                    </p>
+</div>
+<div class="hidden md:block w-1/3 bg-surface-container-low aspect-[3/4] relative overflow-hidden">
+<img class="object-cover w-full h-full grayscale opacity-40 mix-blend-multiply" data-alt="minimalist modern office interior with large windows and sharp architectural shadows in black and white photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrazdClKcFLgu5br1oDQBfFFhrCaFxTnDYJCM2h8GubssK6wt9h_Wu4X2DGI0l_K_OBKtTeGEfsnzWbYvYzmJypZp-mi8t0fwmkqbtuZ8lNErJHVkJwYvL42K5jD5kIfGbbgXi_YgjkAs7l36sRVLsce6qtJ9rzKsocchvTUlkXfQxGhDQtJKb_a0nhoPbEkxG7qPGEAdelugiW6a6nJcCRm6dH1PEOfQlhlTl4B62KUsgF71_ao1JEeSK5TOi6Ppcw950BLTo9jc"/>
+<div class="absolute inset-0 border-[20px] border-surface"></div>
+</div>
+</div>
+</section>
+<!-- Content Grid: Asymmetric Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Side Navigation/Quick Links - Sticky -->
+<aside class="md:col-span-3 hidden md:block">
+<div class="sticky top-40 flex flex-col gap-6 text-sm font-bold tracking-widest text-primary uppercase">
+<a class="hover:opacity-60 transition-opacity" href="#collection">01. איסוף נתונים</a>
+<a class="hover:opacity-60 transition-opacity" href="#cookies">02. עוגיות (Cookies)</a>
+<a class="hover:opacity-60 transition-opacity" href="#rights">03. זכויות משתמש</a>
+<a class="hover:opacity-60 transition-opacity" href="#security">04. אבטחת מידע</a>
+</div>
+</aside>
+<!-- Main Legal Content -->
+<div class="md:col-span-9 space-y-24">
+<!-- Section 01: Data Collection -->
+<section class="relative" id="collection">
+<span class="text-sm font-black text-primary/10 absolute -right-8 -top-8 text-8xl">01</span>
+<div class="bg-surface-container-low p-8 md:p-12">
+<h2 class="text-2xl font-bold text-primary mb-8">איסוף נתונים ומידע אישי</h2>
+<div class="space-y-6 text-on-surface-variant editorial-text">
+<p>אנו אוספים מידע הנמסר על ידכם מרצונכם החופשי בעת שימוש בפורטל או הרשמה לשירותי הסוכנות. מידע זה כולל:</p>
+<ul class="space-y-4 list-none pr-4 border-r-2 border-outline-variant">
+<li><strong>פרטי התקשרות:</strong> שם מלא, כתובת דוא"ל ומספר טלפון לצורך תיאום סיורים וייעוץ.</li>
+<li><strong>העדפות נכס:</strong> סוגי מבנים, סגנון אדריכלי וטווחי מחירים המעניינים אתכם.</li>
+<li><strong>נתונים טכניים:</strong> כתובת IP, סוג דפדפן ונתוני שימוש באתר לשיפור חוויית המשתמש.</li>
+</ul>
+<p>השימוש במידע נעשה אך ורק למטרות תפעוליות ושיפור השירות האישי הניתן לכם ע"י AGENT-X.</p>
+</div>
+</div>
+</section>
+<!-- Section 02: Cookies -->
+<section class="relative" id="cookies">
+<span class="text-sm font-black text-primary/10 absolute -right-8 -top-8 text-8xl">02</span>
+<div class="p-8 md:p-12">
+<h2 class="text-2xl font-bold text-primary mb-8">מדיניות עוגיות (Cookies)</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="editorial-text text-on-surface-variant">
+<p>אתר AGENT-X משתמש בטכנולוגיית Cookies על מנת להתאים את התוכן המוצג לצרכים שלכם ולאפשר זיהוי מהיר בכניסות חוזרות.</p>
+<p class="mt-4">אנו משתמשים בעוגיות הכרחיות לתפעול השוטף של הפורטל ובעוגיות ניתוח (Analytics) לשיפור מבנה האתר.</p>
+</div>
+<div class="bg-primary-container text-on-primary-container p-6 flex flex-col justify-center">
+<span class="material-symbols-outlined text-4xl mb-4">cookie</span>
+<p class="text-sm font-medium leading-relaxed">באפשרותכם לנטרל את השימוש בעוגיות דרך הגדרות הדפדפן שלכם, אך הדבר עשוי להשפיע על חלק מהפונקציות בפורטל.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 03: User Rights -->
+<section class="relative" id="rights">
+<span class="text-sm font-black text-primary/10 absolute -right-8 -top-8 text-8xl">03</span>
+<div class="bg-surface-container-highest p-8 md:p-12">
+<h2 class="text-2xl font-bold text-primary mb-8">זכויות המשתמש</h2>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<div class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-2">זכות העיון</h4>
+<p class="text-on-surface-variant editorial-text">לכל משתמש קיימת הזכות לעיין במידע המוחזק עליו במאגרי המידע שלנו.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined">edit</span>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-2">זכות התיקון והמחיקה</h4>
+<p class="text-on-surface-variant editorial-text">ניתן לבקש לתקן מידע שאינו מדויק או לבקש את מחיקתו לצמיתות בכפוף להוראות הדין.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-2">דיוור ישיר</h4>
+<p class="text-on-surface-variant editorial-text">באפשרותכם לבקש בכל עת להסיר את עצמכם מרשימות הדיוור השיווקיות שלנו.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 04: Security -->
+<section class="relative" id="security">
+<span class="text-sm font-black text-primary/10 absolute -right-8 -top-8 text-8xl">04</span>
+<div class="p-8 md:p-12 border-2 border-surface-container-high">
+<h2 class="text-2xl font-bold text-primary mb-8">אבטחת מידע וסודיות</h2>
+<p class="text-on-surface-variant editorial-text mb-6">
+                            AGENT-X מיישמת מערכות ונהלים מתקדמים ביותר לאבטחת מידע. בעוד שמערכות אלו מצמצמות את הסיכונים לחדירה בלתי-מורשית, אין הן מעניקות חסינות מוחלטת. לפיכך, AGENT-X אינה מתחייבת ששירותיה יהיו חסינים באופן מוחלט מפני גישה בלתי מורשית למידע המאוחסן בהם.
+                        </p>
+<div class="bg-surface p-4 text-xs font-mono text-secondary tracking-widest">
+                            ENCRYPTION_STANDARD: AES-256-GCM | COMPLIANCE: GDPR_READY
+                        </div>
+</div>
+</section>
+<!-- Contact Footer -->
+<section class="pt-12 border-t border-outline-variant">
+<p class="text-primary font-bold mb-4 italic">יש לכם שאלות נוספות?</p>
+<p class="text-on-surface-variant">ניתן ליצור קשר עם הממונה על הגנת הפרטיות במשרדנו בכתובת: legal@agent-x.co.il</p>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f3f3f3] w-full mt-auto">
+<div class="flex flex-col md:flex-row-reverse justify-between items-center px-12 py-16 w-full">
+<div class="flex gap-12 mb-8 md:mb-0">
+<a class="font-manrope text-sm tracking-wide text-[#002B5B]/70 hover:text-[#001736] transition-colors" href="index.html">בית</a>
+<a class="font-manrope text-sm tracking-wide text-[#002B5B]/70 hover:text-[#001736] transition-colors" href="terms.html">תקנון</a>
+<a class="font-manrope text-sm tracking-wide text-[#002B5B] font-bold underline decoration-2 underline-offset-4" href="privacy.html">פרטיות</a>
+<a class="font-manrope text-sm tracking-wide text-[#002B5B]/70 hover:text-[#001736] transition-colors" href="portal.html">פורטל</a>
+</div>
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-bold text-[#002B5B] text-xl tracking-tighter">AGENT-X</span>
+<p class="font-manrope text-sm tracking-wide text-[#002B5B]/70">© 2024 AGENT-X Architectural Real Estate</p>
+</div>
+</div>
+</footer>
+</body></html>   
