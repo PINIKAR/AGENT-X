@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f3f3f3",
+                    "primary-fixed-dim": "#a9c7ff",
+                    "on-secondary-fixed-variant": "#404753",
+                    "primary-fixed": "#d6e3ff",
+                    "tertiary-container": "#39290e",
+                    "secondary-fixed": "#dce3f2",
+                    "tertiary-fixed-dim": "#dec39c",
+                    "outline": "#747780",
+                    "on-secondary-container": "#5e6571",
+                    "secondary-container": "#dce3f2",
+                    "on-secondary-fixed": "#151c27",
+                    "tertiary": "#221500",
+                    "outline-variant": "#c4c6d0",
+                    "inverse-surface": "#2f3131",
+                    "on-tertiary-fixed-variant": "#564426",
+                    "on-primary-fixed-variant": "#264778",
+                    "on-background": "#1a1c1c",
+                    "surface-tint": "#405f91",
+                    "on-tertiary-fixed": "#271902",
+                    "on-surface": "#1a1c1c",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#a88f6c",
+                    "on-surface-variant": "#43474f",
+                    "surface-container": "#eeeeee",
+                    "error": "#ba1a1a",
+                    "surface": "#f9f9f9",
+                    "on-primary-container": "#7594ca",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#fbdeb7",
+                    "background": "#f9f9f9",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary-fixed": "#001b3d",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e8e8e8",
+                    "primary": "#001736",
+                    "error-container": "#ffdad6",
+                    "secondary": "#585f6b",
+                    "primary-container": "#002b5b",
+                    "surface-dim": "#dadada",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "secondary-fixed-dim": "#c0c7d5",
+                    "inverse-primary": "#a9c7ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .frosted-blur { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .architectural-gradient { background: linear-gradient(135deg, #001736 0%, #002b5b 100%); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Anchor -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm shadow-[#002B5B]/5">
+<div class="flex items-center justify-between px-8 h-16 w-full">
+<div class="text-lg font-black tracking-[-0.05em] text-[#002B5B] dark:text-white uppercase">
+                AGENT-X
+            </div>
+<div class="flex items-center gap-2 text-[#002B5B] font-bold font-manrope tracking-tighter uppercase text-xs">
+<span class="material-symbols-outlined" style="font-size: 18px;">architecture</span>
+<span>ARCHITECTURAL AI</span>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto overflow-hidden">
+<!-- Hero Section: The Invitation -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div class="space-y-12">
+<header class="space-y-6">
+<h1 class="text-5xl md:text-7xl font-extralight tracking-tight leading-[1.1] text-primary">
+                        הנכס הבא שלך <br/>
+<span class="font-bold">כבר מדבר בעצמו?</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-md font-light leading-relaxed">
+                        הופכים תיאור פשוט לקמפיין שיווקי יוקרתי תוך שניות. טכנולוגיית AI המותאמת במיוחד לשוק הנדל״ן הישראלי.
+                    </p>
+</header>
+<div class="space-y-8">
+<div class="relative group">
+<label class="block text-[10px] uppercase tracking-widest font-bold text-primary mb-2 opacity-50 group-focus-within:opacity-100 transition-opacity">תיאור הנכס</label>
+<textarea class="w-full min-h-[200px] bg-surface-container-high border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-xl font-light p-6 resize-none transition-all placeholder:text-outline/40" placeholder="תארו את הנכס כאן (למשל: פנטהאוז 4 חדרים, נוף לים, מרפסת שמש...)"></textarea>
+</div>
+<!-- The Magic Button -->
+<button class="w-full architectural-gradient text-on-primary py-6 rounded-DEFAULT font-bold tracking-widest uppercase hover:opacity-90 active:scale-[0.98] transition-all shadow-xl shadow-primary/10 flex items-center justify-center gap-3">
+<span>צרו קמפיין שיווקי ברגע</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</button>
+</div>
+</div>
+<!-- Asymmetric Visual Element -->
+<div class="relative hidden lg:block">
+<div class="aspect-[4/5] rounded-DEFAULT overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" data-alt="ultra-modern luxury apartment interior with floor-to-ceiling windows showing a coastal city sunset and minimalist high-end furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzg-Kewu7J0r-MGden0fa5KJDYPd1yhDiA6l8U-UtEFcQ1A3i2F7cOaPIjnHWPJ-bR015OlV5x8KAjidAtNYM-mN0IqVyfgKDQUdLqnXonMDnb-YRX_LaxqmvL0d468vX86JZ6WylNkuV7x1Oum6y4bSD0YBiSp0eyWIDMfmSDriZGcTZv_pBMQ_WC5wTpU7TISnxi67teaDoNYwH7yu5sNrXQ5CAc1bmqGLFdLnme4fW7KR8hN-E7ihRSNKlNTMvwek2MxsIDCPA"/>
+</div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-primary-container p-8 flex flex-col justify-end text-on-primary-container">
+<span class="text-4xl font-black mb-2 leading-none">01</span>
+<p class="text-xs font-bold uppercase tracking-widest">Architectural precision in every word.</p>
+</div>
+</div>
+</section>
+<!-- The Tease Result: Below the fold -->
+<section class="mt-40 max-w-2xl mx-auto space-y-12">
+<div class="text-center space-y-4">
+<span class="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/40">Preview / תצוגה מקדימה</span>
+<h2 class="text-3xl font-light text-primary">כך יראה הקמפיין שלך</h2>
+</div>
+<!-- Social Media Preview Card -->
+<div class="relative surface-container-lowest shadow-2xl rounded-lg overflow-hidden ring-1 ring-primary/5">
+<!-- Post Header -->
+<div class="p-6 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">business_center</span>
+</div>
+<div>
+<div class="font-bold text-sm tracking-tight">הסוכן האישי שלך</div>
+<div class="text-xs text-on-surface-variant font-light">לפני שניה • AGENT-X AI</div>
+</div>
+</div>
+<!-- Post Image -->
+<div class="aspect-square bg-surface-container-low relative">
+<img class="w-full h-full object-cover" data-alt="cinematic wide shot of a contemporary villa with an infinity pool reflecting the deep blue twilight sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_qV7pr_cWYqEo_spEv1CaDGAdQWxihlPpEIf-T8NXzJReCk3lzo1C4df1flwQ8aslvI4CXIfVM5M65D636t_wvOVQ841Cwk20hSZfrKxtaQAiw3nhdse-txrB_C6u_blChYcIOgBj59QyItl8p0LakzSnzMUwjEAwzegLmTbZcGjWPppS1BFG59lBDpcM2XF-PWm126Q1ZMyeOkqBbgciegfxJSVLYoulXWX7bbfjGj-obKHHNFfPVlpXNBogI5Nu33-zIEqrw8g"/>
+</div>
+<!-- Post Content with Blur -->
+<div class="p-8 space-y-4 relative">
+<div class="space-y-2">
+<h3 class="text-2xl font-bold text-primary tracking-tight leading-none">הזדמנות נדירה: שלמות אדריכלית מול הים</h3>
+<p class="text-on-surface leading-relaxed font-light">כשהעיצוב המודרני פוגש את קו האופק. פנטהאוז ייחודי המציע חוויית מגורים בלתי מתפשרת עם מפרט טכני עשיר וחללים רחבי ידיים...</p>
+</div>
+<!-- Blurred Overlay & Lead Gen -->
+<div class="absolute inset-x-0 bottom-0 pt-32 pb-12 px-8 frosted-blur bg-white/60 flex flex-col items-center text-center justify-end">
+<div class="space-y-6 max-w-sm w-full">
+<div class="space-y-2">
+<h4 class="text-xl font-bold text-primary">אהבתם?</h4>
+<p class="text-sm text-on-surface-variant leading-tight">השאירו פרטים לקבלת הקמפיין המלא והמותאם אישית, כולל פוסטים מותאמים לכל הפלטפורמות.</p>
+</div>
+<!-- Lead Gen Form -->
+<form class="space-y-3" onsubmit="return false;">
+<div class="relative group">
+<input class="w-full bg-white border-b-2 border-outline-variant focus:border-primary focus:ring-0 p-4 text-center font-medium transition-all" placeholder="דואר אלקטרוני או טלפון" type="email"/>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-DEFAULT font-bold uppercase tracking-widest text-xs hover:bg-primary-container transition-colors">
+                                    שלחו לי את הקמפיין
+                                </button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Anchor -->
+<footer class="bg-[#f9f9f9] dark:bg-slate-950 py-12">
+<div class="flex flex-col md:flex-row items-center justify-between px-12 max-w-7xl mx-auto gap-4">
+<div class="font-manrope text-[10px] tracking-widest font-medium uppercase text-slate-400">
+                © 2024 AGENT-X. ALL RIGHTS RESERVED.
+            </div>
+<div class="flex gap-8">
+<a class="font-manrope text-[10px] tracking-widest font-medium uppercase text-slate-400 hover:text-[#002B5B] transition-colors" href="#">Privacy</a>
+<a class="font-manrope text-[10px] tracking-widest font-medium uppercase text-slate-400 hover:text-[#002B5B] transition-colors border-b border-[#002B5B] text-[#002B5B]" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>
