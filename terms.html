@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="light" dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#002B5B",
+                    "on-primary": "#ffffff",
+                    "secondary": "#506071",
+                    "surface": "#f8f9fa",
+                    "on-surface": "#191c1d",
+                    "surface-variant": "#e1e3e4",
+                    "on-surface-variant": "#43474f",
+                    "outline": "#747780",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container": "#edeeef"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0px 20px 40px rgba(0, 43, 91, 0.05);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/20 selection:text-primary">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-white/90 backdrop-blur-md border-b border-outline/10">
+<div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-3" href="/index.html">
+<img alt="AGENT-X" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZSmeg3PpSx3dkN0acSVWPrZZeH_nGLng2AhsmKUUcidOXM6lVlUMmeZB949h5nLZ4qCHDpAY5V3rqJliH0NYLdgiaOIPdcnZ-n-oNR7oahKsDuv-Wj11sPdpLy-p53gUvV0YRcOgJJ3uAa3HAmqS9p0EJoQ5sReuliCtrs7zJHrd6eIEJG_SwgIUx0aLZPs3JCKpHM_-iuFlKi2cgso2LGMgJCjYziUMFZ36Bu95G2OxvxvE5eJ8aWMga2Xw2KqcxHCyj9YjY9Aw"/>
+<span class="h-6 w-px bg-outline/20 hidden md:block"></span>
+<h1 class="font-headline font-extrabold tracking-tighter text-xl text-primary hidden md:block uppercase">AGENT-X</h1>
+</a>
+</div>
+<nav class="hidden md:flex items-center gap-8 text-sm font-headline font-bold uppercase tracking-wider">
+<a class="text-on-surface/60 hover:text-primary transition-colors" href="/index.html">בית</a>
+<a class="text-on-surface/60 hover:text-primary transition-colors" href="#">נכסים</a>
+<a class="text-primary border-b-2 border-primary pb-1" href="#">תנאים משפטיים</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 duration-150" data-icon="search">search</span>
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 duration-150" data-icon="account_circle">account_circle</span>
+<span class="material-symbols-outlined text-primary md:hidden cursor-pointer active:scale-95 duration-150" data-icon="menu">menu</span>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-16 md:py-32">
+<!-- Hero Section -->
+<section class="mb-24">
+<div class="flex flex-col md:flex-row gap-16 items-start">
+<div class="w-full md:w-1/2">
+<div class="inline-block px-3 py-1 bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
+                        מסמך רשמי
+                    </div>
+<h2 class="text-6xl md:text-8xl font-headline font-extrabold text-primary tracking-tighter leading-[0.9] mb-8">תנאי<br/>השימוש</h2>
+<p class="text-xl font-body text-on-surface-variant max-w-lg mb-10 leading-relaxed italic">
+                        עודכן לאחרונה: 24 באוקטובר 2023. מסמך זה מגדיר את המחויבות של AGENT-X ליושרה אדריכלית, מצוינות מקצועית ואתיקה דיגיטלית.
+                    </p>
+<div class="flex items-center gap-6">
+<div class="h-[2px] w-16 bg-primary"></div>
+<span class="font-headline text-[11px] font-bold uppercase tracking-[0.3em] text-primary">סטנדרט האוצרות</span>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-[3/4] bg-surface-container-low rounded-sm overflow-hidden editorial-shadow group">
+<img alt="חלל פנימי מינימליסטי" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8adp6sLuVmgOUNza0olfxwn52pSKmy9BFFOE8XeJAaQQSb8qyJHxeKVHD5f-ZF6cyif5LJMjO_duOgtz3Z0xRJjk7B5ExMW6Lpkncvu0pJg8iiFkwD01HQAQQDq9iCcipUUBMgAjh8mbkXDGDoshScRqcFXgUxZMQS_M22Hd_c6YL84kBAJbH5PGLO4kGHNXUcNZaK4v9X_q6xPsZSeIaQ5sPx-BYRYCsxh1PtFy3lePQnu1jRKDNEhJjPhq0ueiOLWWHd_wK6ys"/>
+</div>
+<!-- Absolute Float UI -->
+<div class="absolute -bottom-10 -right-10 md:-right-20 p-10 bg-white border border-outline/5 editorial-shadow max-w-sm hidden md:block">
+<h4 class="font-headline font-extrabold text-primary text-lg mb-3 uppercase tracking-tight">מצוינות חוזית</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">הגדרת היחסים הסימביוטיים בין טכנולוגיה מתקדמת לבין מומחיות נדל"ן אנושית.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Terms Content - Editorial Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Main Content Column -->
+<div class="md:col-span-8 space-y-20">
+<!-- Section 1 -->
+<section>
+<div class="flex items-baseline gap-4 mb-8">
+<span class="text-4xl font-headline font-extrabold text-primary/20">01</span>
+<h3 class="font-headline text-3xl font-extrabold text-primary uppercase tracking-tight">אחריות המשתמש</h3>
+</div>
+<div class="prose prose-slate max-w-none text-on-surface-variant leading-loose space-y-8">
+<p class="text-lg">כמשתמשים בפלטפורמת AGENT-X, אתם מקבלים עליכם את המשימה לשמור על הסטנדרטים האסתטיים והמקצועיים הגבוהים ביותר. המשתמשים מסכימים לספק מידע מדויק, מאומת ושאינו מטעה בכל הנוגע לנכסים אדריכליים.</p>
+<div class="grid gap-6">
+<div class="flex gap-6 p-6 bg-surface-container-low border-r-2 border-primary">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+<div>
+<h4 class="font-headline font-bold text-primary mb-1">אימות נתונים</h4>
+<p class="text-sm">חובת אימות המקוריות של כל תיעוד ויזואלי וטקסטואלי המוזן למערכת AGENT-X.</p>
+</div>
+</div>
+<div class="flex gap-6 p-6 bg-surface-container-low border-r-2 border-primary">
+<span class="material-symbols-outlined text-primary" data-icon="security">security</span>
+<div>
+<h4 class="font-headline font-bold text-primary mb-1">אבטחת נכסים דיגיטליים</h4>
+<p class="text-sm">שמירה קפדנית על סודיות פרטי הגישה ותיקי העבודות האדריכליים המאוחסנים.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2 -->
+<section>
+<div class="flex items-baseline gap-4 mb-8">
+<span class="text-4xl font-headline font-extrabold text-primary/20">02</span>
+<h3 class="font-headline text-3xl font-extrabold text-primary uppercase tracking-tight">קניין רוחני</h3>
+</div>
+<div class="bg-primary p-12 text-white mb-8">
+<p class="font-body text-xl leading-relaxed mb-8 italic">
+                            "כל תוכן שיווקי המיוצר על ידי המערכת, לרבות תיאורים מבוססי בינה מלאכותית ופרשנויות חזותיות, נותר בבעלות בלעדית של AGENT-X עד למתן רישיון מפורש."
+                        </p>
+<div class="h-px w-full bg-white/20 mb-8"></div>
+<p class="text-sm text-white/70">אלגוריתמי ה-"Maven Engine" ודפוסי העיצוב הייחודיים מוגנים כסודות מסחריים תחת החוק הבינלאומי.</p>
+</div>
+</section>
+<!-- Section 3 -->
+<section>
+<div class="flex items-baseline gap-4 mb-8">
+<span class="text-4xl font-headline font-extrabold text-primary/20">03</span>
+<h3 class="font-headline text-3xl font-extrabold text-primary uppercase tracking-tight">הגבלת אחריות</h3>
+</div>
+<div class="grid md:grid-cols-2 gap-12 text-on-surface-variant">
+<div class="space-y-4">
+<h4 class="font-headline font-bold text-primary text-xs uppercase tracking-[0.2em]">החרגה כללית</h4>
+<p class="text-sm leading-relaxed text-justify">השירות ניתן "כמות שהוא" (AS IS). AGENT-X אינה מתחייבת לדיוק המוחלט של תחזיות שיווקיות או הערכות שווי נכסים שנוצרו באופן אוטונומי.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline font-bold text-primary text-xs uppercase tracking-[0.2em]">תקרת חבות</h4>
+<p class="text-sm leading-relaxed text-justify">בכל מקרה, אחריותנו הכוללת לנזקים לא תעלה על הסכום ששולם על ידי המשתמש עבור הגישה לשירותי הפרימיום במהלך ששת החודשים האחרונים.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Sidebar Column -->
+<div class="md:col-span-4 space-y-12">
+<div class="sticky top-32">
+<div class="bg-surface-container p-10 border border-outline/5 editorial-shadow">
+<h4 class="font-headline font-extrabold text-primary text-xl mb-6 uppercase tracking-tight">מסמכים להורדה</h4>
+<div class="space-y-4">
+<button class="w-full flex items-center justify-between p-4 bg-white hover:bg-primary hover:text-white transition-all duration-300 border border-outline/10 group">
+<span class="font-headline font-bold text-sm uppercase">תנאי שימוש PDF</span>
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 bg-white hover:bg-primary hover:text-white transition-all duration-300 border border-outline/10 group">
+<span class="font-headline font-bold text-sm uppercase">מדיניות פרטיות</span>
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+</div>
+<div class="mt-10 pt-10 border-t border-outline/10">
+<h5 class="font-headline font-bold text-primary text-xs uppercase tracking-widest mb-4">זקוקים לייעוץ?</h5>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6">הצוות המשפטי שלנו זמין לשאלות בנוגע למודל השירות הייחודי של AGENT-X.</p>
+<a class="inline-block text-primary font-bold text-sm border-b border-primary hover:opacity-70 transition-opacity" href="mailto:legal@agent-x.com">legal@agent-x.com</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-outline/10 bg-white">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-16 gap-8 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<img alt="AGENT-X" class="h-6 w-auto grayscale opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGH0aCgmPKLe58WuUEvUmd_9ohNRIyTxh9JbnxdtBWv8TjNCvhjRrRGmy8-JryAIbsFEZRBVERlgXQzegdEsl_3F7kUbdwNinhUJJa51YZysswMB3qukZSNft3xrs9-p6ssqlmwPhYjQg-uj4xTVbLSRx3DtpTyBIm7z179XujhWs4QNGp-r9_0wj6dYWIAQojaCAVq9ZxvjH9NKvxXgpnXXpIJKa48Z0mBYI7r1DFIkxRL1qONtk0Q4fjQ-n3m8soD1SHvhYU4WQ"/>
+<p class="font-headline text-[10px] uppercase tracking-[0.3em] text-on-surface-variant/60">
+                    © 2024 AGENT-X. פתרונות אוצרות אדריכלית.
+                </p>
+</div>
+<nav class="flex flex-wrap justify-center gap-10">
+<a class="font-headline text-[11px] font-bold uppercase tracking-widest text-primary hover:opacity-50 transition-opacity" href="/index.html">בית</a>
+<a class="font-headline text-[11px] font-bold uppercase tracking-widest text-primary hover:opacity-50 transition-opacity" href="#">פרטיות</a>
+<a class="font-headline text-[11px] font-bold uppercase tracking-widest text-primary border-b border-primary" href="#">תנאים</a>
+<a class="font-headline text-[11px] font-bold uppercase tracking-widest text-on-surface-variant/50 hover:text-primary transition-colors" href="#">פורטל סוכנים</a>
+</nav>
+</div>
+</footer>
+</body></html>
