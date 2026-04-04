@@ -87,7 +87,7 @@
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head>
+</head>
 <body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
 <!-- Top Navigation Anchor -->
 <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm shadow-[#002B5B]/5">
@@ -120,7 +120,7 @@
 <textarea class="w-full min-h-[200px] bg-surface-container-high border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-xl font-light p-6 resize-none transition-all placeholder:text-outline/40" placeholder="תארו את הנכס כאן (למשל: פנטהאוז 4 חדרים, נוף לים, מרפסת שמש...)"></textarea>
 </div>
 <!-- The Magic Button -->
-<button class="w-full architectural-gradient text-on-primary py-6 rounded-DEFAULT font-bold tracking-widest uppercase hover:opacity-90 active:scale-[0.98] transition-all shadow-xl shadow-primary/10 flex items-center justify-center gap-3">
+<button class="w-full architectural-gradient text-on-primary py-6 rounded-DEFAULT font-bold tracking-widest uppercase hover:opacity-90 active:scale-[0.98] transition-all shadow-xl shadow-primary/10 flex items-center justify-center gap-3" id="generate-btn">
 <span>צרו קמפיין שיווקי ברגע</span>
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
 </button>
@@ -138,7 +138,7 @@
 </div>
 </section>
 <!-- The Tease Result: Below the fold -->
-<section class="mt-40 max-w-2xl mx-auto space-y-12">
+<section class="mt-40 max-w-2xl mx-auto space-y-12 opacity-0 invisible transition-all duration-1000 ease-in-out" id="preview-section">
 <div class="text-center space-y-4">
 <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/40">Preview / תצוגה מקדימה</span>
 <h2 class="text-3xl font-light text-primary">כך יראה הקמפיין שלך</h2>
@@ -199,4 +199,15 @@
 </div>
 </div>
 </footer>
-</body></html>
+<script>
+  document.getElementById('generate-btn').addEventListener('click', function() {
+    const preview = document.getElementById('preview-section');
+    preview.classList.remove('opacity-0', 'invisible');
+    preview.classList.add('opacity-100', 'visible');
+    
+    // Scroll to the preview section smoothly
+    setTimeout(() => {
+      preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  });
+</script></body></html>
