@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#001736",
+                    "on-primary-container": "#7594ca",
+                    "secondary-fixed": "#dce3f2",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#43474f",
+                    "on-primary-fixed": "#001b3d",
+                    "surface": "#f9f9f9",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#564426",
+                    "inverse-surface": "#2f3131",
+                    "secondary-fixed-dim": "#c0c7d5",
+                    "surface-container-high": "#e8e8e8",
+                    "inverse-primary": "#a9c7ff",
+                    "on-tertiary-fixed": "#271902",
+                    "surface-dim": "#dadada",
+                    "primary-fixed-dim": "#a9c7ff",
+                    "on-primary-fixed-variant": "#264778",
+                    "surface-bright": "#f9f9f9",
+                    "primary-fixed": "#d6e3ff",
+                    "secondary": "#585f6b",
+                    "surface-container-highest": "#e2e2e2",
+                    "outline-variant": "#c4c6d0",
+                    "on-surface": "#1a1c1c",
+                    "on-background": "#1a1c1c",
+                    "on-secondary-container": "#5e6571",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#39290e",
+                    "surface-tint": "#405f91",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f1f1f1",
+                    "on-secondary-fixed-variant": "#404753",
+                    "tertiary-fixed-dim": "#dec39c",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#eeeeee",
+                    "outline": "#747780",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#a88f6c",
+                    "secondary-container": "#dce3f2",
+                    "on-error": "#ffffff",
+                    "background": "#f9f9f9",
+                    "tertiary": "#221500",
+                    "primary-container": "#002b5b",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#151c27",
+                    "surface-variant": "#e2e2e2",
+                    "tertiary-fixed": "#fbdeb7",
+                    "surface-container-low": "#f3f3f3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f9f9f9; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,43,91,0.05)]">
+<nav class="flex justify-between items-center px-8 h-24 w-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-8">
+<div class="text-2xl font-black tracking-tighter text-cyan-950 dark:text-white">
+                    AGENT-X
+                </div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-cyan-950 dark:text-white font-semibold transition-colors font-['Manrope'] tracking-tight font-light uppercase text-sm" href="index.html">Dashboard</a>
+<a class="text-slate-400 dark:text-slate-500 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors px-3 py-1 rounded font-['Manrope'] tracking-tight font-light uppercase text-sm" href="portal.html">Portfolio</a>
+<a class="text-cyan-950 dark:text-white font-semibold transition-colors px-3 py-1 rounded font-['Manrope'] tracking-tight font-light uppercase text-sm" href="market.html">Market Analysis</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-cyan-900 cursor-pointer p-2 hover:bg-slate-200/50 rounded-full transition-colors" data-icon="search">search</span>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="minimalist user avatar silhouette on a clean professional background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdUkJPLMrrLs66ROqnajOJFGUf4BVlmJs2PDRS1vKKrHj2EgGG-ftkvGdisIvHso2Vkaniepd4uF-oK2FJgKfeivkP7dRcx8jIdqWthgdP5qruOYj2JQ-4rHgXgJKrzQRiPnOdfeicrMfTaMQSU1K_8Z5OKVoIF127zqs5mU4BEt3vXMD7Ou0y7LcF-1YVRLmy6loHWG5aT6u9zbHQQHX7Q_y21yDDFJUk9vfcFS2VvZvb_mvRsmQ8a8U2OCvn0xtsdk1AtlMrjVY"/>
+</div>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-20 px-8 max-w-[1440px] mx-auto">
+<!-- Hero Section -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8 border-b-0">
+<div class="max-w-2xl">
+<h1 class="text-7xl font-extrabold tracking-tighter text-primary mb-4 leading-none">
+                        ניתוח שוק נדל"ן
+                    </h1>
+<p class="text-xl text-on-surface-variant font-light leading-relaxed">
+                        תובנות בזמן אמת עבור אדריכלי השקעות ומתווכי יוקרה. המידע המדויק ביותר בשוק הישראלי.
+                    </p>
+</div>
+<div class="flex gap-4 mb-2">
+<div class="bg-surface-container-low px-6 py-3 rounded-lg text-sm font-medium text-primary">
+                        עדכון אחרון: 12:45
+                    </div>
+</div>
+</div>
+</section>
+<!-- Market Trends Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-12">
+<!-- Real-time Trends Chart -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-8 shadow-[0_20px_50px_rgba(0,43,91,0.03)] relative overflow-hidden group">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="text-2xl font-bold text-primary mb-1">מגמות מחירים למ"ר</h3>
+<p class="text-on-surface-variant text-sm">תל אביב לעומת הרצליה פיתוח • 12 חודשים אחרונים</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-xs font-bold uppercase tracking-wider">תל אביב</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-on-primary-container"></span>
+<span class="text-xs font-bold uppercase tracking-wider">הרצליה</span>
+</div>
+</div>
+</div>
+<!-- Mock Chart Visualization -->
+<div class="h-64 flex items-end gap-1 relative">
+<div class="absolute inset-0 flex flex-col justify-between opacity-10 pointer-events-none">
+<div class="border-t border-primary w-full"></div>
+<div class="border-t border-primary w-full"></div>
+<div class="border-t border-primary w-full"></div>
+<div class="border-t border-primary w-full"></div>
+</div>
+<!-- Minimalist Lines Mockup -->
+<svg class="absolute inset-0 w-full h-full preserve-3d" fill="none" viewbox="0 0 800 200">
+<path d="M0 150C50 140 100 160 150 130C200 100 250 110 300 80C350 50 400 70 450 40C500 10 550 30 600 20C650 10 700 40 800 10" stroke="#001736" stroke-linecap="round" stroke-width="3"></path>
+<path d="M0 180C50 175 100 185 150 170C200 155 250 160 300 145C350 130 400 140 450 125C500 110 550 115 600 100C650 85 700 95 800 80" stroke="#7594ca" stroke-dasharray="8 4" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+<!-- Investment Potential Sidebar -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="bg-primary-container text-white p-8 rounded-xl h-full flex flex-col justify-between">
+<div>
+<h3 class="text-2xl font-bold mb-6">פוטנציאל השקעה</h3>
+<div class="space-y-6">
+<div class="flex justify-between items-center border-b border-white/10 pb-4">
+<div>
+<p class="text-white/60 text-xs uppercase tracking-widest">צפון תל אביב</p>
+<p class="text-lg font-medium">פרויקטים חדשים</p>
+</div>
+<div class="text-right">
+<p class="text-2xl font-black text-on-primary-container">4.2%</p>
+<p class="text-[10px] uppercase opacity-60">ROI צפוי</p>
+</div>
+</div>
+<div class="flex justify-between items-center border-b border-white/10 pb-4">
+<div>
+<p class="text-white/60 text-xs uppercase tracking-widest">הרצליה ב'</p>
+<p class="text-lg font-medium">נכסי יוקרה</p>
+</div>
+<div class="text-right">
+<p class="text-2xl font-black text-on-primary-container">3.8%</p>
+<p class="text-[10px] uppercase opacity-60">ROI צפוי</p>
+</div>
+</div>
+</div>
+</div>
+<button class="mt-8 py-4 bg-white text-primary font-bold text-sm tracking-widest uppercase rounded hover:bg-on-primary-container transition-colors">
+                        דוח מלא להורדה
+                    </button>
+</div>
+</div>
+</div>
+<!-- Heatmap / Neighborhood Grid -->
+<section class="mb-12">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-3xl font-bold tracking-tight text-primary">ביקוש לפי אזורים</h3>
+<div class="flex gap-2">
+<span class="px-4 py-1 bg-surface-container-high rounded-full text-xs font-bold">מגורים</span>
+<span class="px-4 py-1 bg-surface-container rounded-full text-xs font-bold opacity-40">מסחרי</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Neighborhood Tiles -->
+<div class="bg-surface-container-low aspect-square p-6 rounded-lg flex flex-col justify-between group hover:bg-primary transition-all duration-500 cursor-pointer">
+<span class="text-xs font-bold uppercase tracking-tighter group-hover:text-white/60">TLV-NE</span>
+<div>
+<h4 class="text-2xl font-bold group-hover:text-white">צהלה</h4>
+<div class="w-12 h-1 bg-primary group-hover:bg-on-primary-container mt-2"></div>
+</div>
+<p class="text-sm font-light opacity-60 group-hover:text-white/80 group-hover:opacity-100">ביקוש גבוה מאוד (+12%)</p>
+</div>
+<div class="bg-surface-container-low aspect-square p-6 rounded-lg flex flex-col justify-between group hover:bg-primary transition-all duration-500 cursor-pointer">
+<span class="text-xs font-bold uppercase tracking-tighter group-hover:text-white/60">HRZ-P</span>
+<div>
+<h4 class="text-2xl font-bold group-hover:text-white">פיתוח</h4>
+<div class="w-12 h-1 bg-primary group-hover:bg-on-primary-container mt-2"></div>
+</div>
+<p class="text-sm font-light opacity-60 group-hover:text-white/80 group-hover:opacity-100">יציבות שוק</p>
+</div>
+<div class="bg-surface-container-low aspect-square p-6 rounded-lg flex flex-col justify-between group hover:bg-primary transition-all duration-500 cursor-pointer">
+<span class="text-xs font-bold uppercase tracking-tighter group-hover:text-white/60">TLV-C</span>
+<div>
+<h4 class="text-2xl font-bold group-hover:text-white">לב העיר</h4>
+<div class="w-12 h-1 bg-primary group-hover:bg-on-primary-container mt-2"></div>
+</div>
+<p class="text-sm font-light opacity-60 group-hover:text-white/80 group-hover:opacity-100">מחסור בהיצע</p>
+</div>
+<div class="relative overflow-hidden aspect-square rounded-lg group cursor-pointer">
+<img alt="City Map" class="absolute inset-0 w-full h-full object-cover brightness-75 group-hover:scale-110 transition-transform duration-700" data-alt="minimalist architectural map of Tel Aviv with clean lines and subtle tonal shifts in navy and white" data-location="Tel Aviv" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgd6QoISu9ypoi8AgjLoamRAaoov3oKHSSAoAKxC-UruWg_AdVWZwvzswKRI6tA_JPQik7g-QP8hLPj-4txbx7Y0zZdqdfoc7yWD4bLUaVYPhkOylAWzIC2lhqFAmlU7QOEDYoOigLeRvgAeCf93dNzCkJRBDsM6opZR48a0cnTvoigvyG6b_dhLjT26FtZMlCseIbgOPSGlpy6ahSjDo6X8caQkVLPUojXIBxMvFOMqoIvs2FTYH2EmYylVY0vkSHM4BT8-8nHJ8"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="text-white font-bold tracking-widest uppercase text-xs bg-primary/80 px-4 py-2 backdrop-blur-md">מפת חום מלאה</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Market News (Editorial) -->
+<section>
+<h3 class="text-3xl font-bold tracking-tight text-primary mb-8">חדשות השוק • אדריכלות ונדל"ן</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<article class="group">
+<div class="overflow-hidden mb-6 aspect-video">
+<img alt="Luxury Architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="ultra-modern glass residential skyscraper in Tel Aviv during twilight with reflections of city lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMR6kuNEOe8c78Wjv9tyzBC7oScq1EJqKA4UcpLYDEpAoo6Eb4oaecl6JGqgMTHUZrwRqo2UrgTcQrGrSvbKBHJXmHbSyAjGuUu6nAxdQfI3-DgGx5ggHi3LtaVvx_zgcEf9J2aCc3EOhB5rU2Y8z7bibs15zwPoQKyn1wQqJKA8K61EE-1sgaDgvsiVljq8G3gZuwybauvFKetcLf0bif6_0F38kNtBOtvT3_rFW12jqLR-vqKEHIHGiwVFqlotl3Q5hUtpdEhoM"/>
+</div>
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-primary-container mb-2 block">מגמות בנייה</span>
+<h4 class="text-xl font-bold mb-3 leading-tight group-hover:text-on-primary-container transition-colors">מהפכת המגדלים המעורבים: כיצד עירוב שימושים משנה את ערך הקרקע?</h4>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed line-clamp-3">
+                        ניתוח מעמיק של פרויקטים המשלבים תעסוקה, פנאי ומגורים יוקרתיים בלב תל אביב והשפעתם הישירה על התשואה השנתית למשקיעים...
+                    </p>
+</article>
+<article class="group">
+<div class="overflow-hidden mb-6 aspect-video">
+<img alt="Economic Analysis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="minimalist close-up of financial documents and architectural blueprints on a dark wooden desk with soft dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD913zneA6lPCeFXgZBdNmu6lI9rpvvSBtRjatwGrpbqXpTEnfcbpZ6oMLoGAgktrSUgBOIXhuiqLvIlLQ8WfJKaJMyXFQQYRP9LJ8N-r53dF5wRYx-zmSeES8szjSBiXLOp_UfRZX9pb9lwSltRMBqh2F40b7IJUuvy1AaNl2Epzv5FEVp7jGGcPORFX5bNieihMSSthexl7rCZ72n_4QA2jDL8ps2ieljMqNOKjfLx6aCoWfRrMk3ZdZ925grzBOn_8zWi11z5CI"/>
+</div>
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-primary-container mb-2 block">כלכלה וריבית</span>
+<h4 class="text-xl font-bold mb-3 leading-tight group-hover:text-on-primary-container transition-colors">תחזית הריבית לרבעון השלישי: מה אומרים המומחים של AGENT-X?</h4>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed line-clamp-3">
+                        למרות התנודתיות בשווקים העולמיים, שוק היוקרה הישראלי מפגין חסינות יוצאת דופן. סקירה של נתוני בנק ישראל והשלכותיהם...
+                    </p>
+</article>
+<article class="group">
+<div class="overflow-hidden mb-6 aspect-video">
+<img alt="Interior Luxury" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="high-end minimalist penthouse living room with floor-to-ceiling windows overlooking a Mediterranean sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9sk-JY_v8CkahumgzH1E_aSqqOacq_5JTA8o0Oj9ufnoSXz3MK1CopVfPUpWz0F_CpAAFjzMx2nMzZCWJdtDqnhXgRXgVqE-lvee9YhuS8ZDyUQ1ln-qx-8KOjmnVdIvhZLvXn7pFBef-ezflGDiB_i4mQVfJRPEIVJ8K-hqhnsyGfopUhVKd9eMUVa_m4vxvtbxD6WJZ7rdGeFzx0lx_BmRrUugvSy1m123Zfd5EHl-P4dhdP7ge9ej0TAoV1uE1xKkRMljIPiw"/>
+</div>
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-primary-container mb-2 block">עיצוב וערך</span>
+<h4 class="text-xl font-bold mb-3 leading-tight group-hover:text-on-primary-container transition-colors">אדריכלות פנים כזרז לעליית ערך: המותגים שמקפיצים את המחיר למ"ר</h4>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed line-clamp-3">
+                        מחקר חדש מגלה כי שיתוף פעולה עם משרדי אדריכלות בינלאומיים מעלה את מחיר הנכס ב-15% בממוצע מעל מחיר השוק באזור...
+                    </p>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 px-8 border-t border-slate-200/15">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="text-lg font-bold text-cyan-950 dark:text-white uppercase tracking-tighter">
+                AGENT-X
+            </div>
+<div class="flex gap-8">
+<a class="text-slate-400 dark:text-slate-600 hover:text-cyan-950 dark:hover:text-white transition-all font-['Manrope'] text-xs uppercase tracking-widest" href="index.html">Market Insights</a>
+<a class="text-slate-400 dark:text-slate-600 hover:text-cyan-950 dark:hover:text-white transition-all font-['Manrope'] text-xs uppercase tracking-widest" href="portal.html">Portfolio</a>
+<a class="text-slate-400 dark:text-slate-600 hover:text-cyan-950 dark:hover:text-white transition-all font-['Manrope'] text-xs uppercase tracking-widest" href="terms.html">Valuation Engine</a>
+<a class="text-slate-400 dark:text-slate-600 hover:text-cyan-950 dark:hover:text-white transition-all font-['Manrope'] text-xs uppercase tracking-widest" href="privacy.html">Privacy</a>
+</div>
+<div class="text-cyan-900 dark:text-cyan-100 font-['Manrope'] text-xs uppercase tracking-widest opacity-80">
+                © 2024 AGENT-X Architectural Real Estate Systems. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
