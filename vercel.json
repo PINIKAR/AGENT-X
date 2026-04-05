@@ -1,3 +1,9 @@
 {
-  "outputDirectory": "."
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "functions": {
+    "api/generate.js": {
+      "runtime": "nodejs22.x"
+    }
+  }
 }
